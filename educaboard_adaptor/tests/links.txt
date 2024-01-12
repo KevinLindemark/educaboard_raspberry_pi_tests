@@ -1,0 +1,5 @@
+GPS test:
+https://www.instructables.com/Raspberry-Pi-the-Neo-6M-GPS/
+
+minicom & pyserial:
+https://electrosome.com/uart-raspberry-pi-python/
