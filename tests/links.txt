@@ -1,0 +1,9 @@
+GPS test:
+https://www.instructables.com/Raspberry-Pi-the-Neo-6M-GPS/
+
+minicom & pyserial:
+https://electrosome.com/uart-raspberry-pi-python/
+
+i2c scan with i2c-tools:
+https://learn.adafruit.com/scanning-i2c-addresses/raspberry-pi
+
