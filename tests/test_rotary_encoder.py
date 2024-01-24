@@ -1,5 +1,5 @@
 from threading import Event
-from gpiozero import RotaryEncoder, RGBLED, Button
+from gpiozero import RotaryEncoder, Button
 
 rotor = RotaryEncoder(7, 8, wrap=True, max_steps=180)
 rotor.steps = -180
