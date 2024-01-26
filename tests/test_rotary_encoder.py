@@ -1,7 +1,7 @@
 from threading import Event
 from gpiozero import RotaryEncoder, Button
 
-rotor = RotaryEncoder(7, 8, wrap=True, max_steps=180)
+rotor = RotaryEncoder(26, 6, wrap=True, max_steps=180)
 rotor.steps = -180
 # JP1 SCK must be connected with dupont to JP6 GP4 (to test without SPI port expander)
 btn = Button(11, pull_up=True)
