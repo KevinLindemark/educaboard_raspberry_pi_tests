@@ -1,6 +1,8 @@
 import spidev
 import time
 
+# Hvis dupont kabel forbindes til gp4 og skiftes mellem gnd og 3v3 vil "knaptrykket registreres, men der sker ikke noget når selve knappen trykkes
+
 # Create a SpiDev object
 spi = spidev.SpiDev()
 
