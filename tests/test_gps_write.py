@@ -38,7 +38,7 @@ while 1:
     if received_message != b'':
         
         print(received_message,"\n")
-
+## MICROPYTHON EXAMPLE CODE SNIPPET
 """
         # Enable relevant and wanted NMEA frames
         uart.write("$PUBX,40,GGA,1,1,1,0*5B\n")     # Make sure the $GPGGA, $GPRMC and $GPZDA are always enabled
