@@ -21,15 +21,15 @@ counter=0
 print(ser.name) # name of the serial port used!
 #########################################################
 # WRITE DOES NOT SEEM TO WORK - NEED TO FIGURE OUT WHY
-print("$PUBX,40,GLL,0,0,0,0*5C\n".encode('utf-8'))
-ser.write("$PUBX,40,GLL,0,0,0,0*5C\n".encode('utf-8'))
-ser.write("$PUBX,40,GRS,0,0,0,0*5D\n".encode('utf-8'))
-ser.write("$PUBX,40,GSA,0,0,0,0*5E\n".encode('utf-8'))
-ser.write("$PUBX,40,GST,0,0,0,0*5D\n".encode('utf-8'))
-ser.write("$PUBX,40,GSV,0,0,0,0*5E\n".encode('utf-8'))
-ser.write("$PUBX,40,ZDA,0,0,0,0*5D\n".encode('utf-8'))
-ser.write("$PUBX,40,RMT,0,0,0,0*5E\n".encode('utf-8'))
-ser.write("$PUBX,40,VTG,0,0,0,0*5E\n".encode('utf-8'))
+# check tha CR og LF are note added by pyserial
+ser.write(b"$PUBX,40,GLL,0,0,0,0*5C\n")
+ser.write(b"$PUBX,40,GRS,0,0,0,0*5D\n")
+ser.write(b"$PUBX,40,GSA,0,0,0,0*5E\n")
+ser.write(b"$PUBX,40,GST,0,0,0,0*5D\n")
+ser.write(b"$PUBX,40,GSV,0,0,0,0*5E\n")
+ser.write(b"$PUBX,40,ZDA,0,0,0,0*5D\n")
+ser.write(b"$PUBX,40,RMT,0,0,0,0*5E\n")
+ser.write(b"$PUBX,40,VTG,0,0,0,0*5E\n")
 
 while 1:
     received_message = ser.readline() # the message send from esp32 needs to have a \n newline in the end
