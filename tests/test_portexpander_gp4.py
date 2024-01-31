@@ -21,10 +21,9 @@ while True:
     # Read the GPIO register
     resp = spi.xfer2([0x41, 0x09, 0x10])
     print(resp)
-    time.sleep(1)
     # Check if the button connected to GP4 is pressed
     print(resp[2] & 0x10)
-    if resp[2] & 0x10:
+    if not resp[2] & 0x10:
         print("Button pressed!")
     # Wait for a while before the next check
     time.sleep(0.1)
