@@ -17,10 +17,9 @@ ser = serial.Serial(
     bytesize=serial.EIGHTBITS,
     timeout=1
 )
-counter=0
 print(ser.name) # name of the serial port used!
 #########################################################
-# WRITE DOES NOT SEEM TO WORK - NEED TO FIGURE OUT WHY
+# HER PRØVES DET AT DISABLE NMEA SENTENCES MED SERIAL WRITE: (VIRKER IKKE)
 print("$PUBX,40,GLL,0,0,0,0*5C\n".encode('utf-8'))
 ser.write("$PUBX,40,GLL,0,0,0,0*5C\n".encode('utf-8'))
 ser.write("$PUBX,40,GRS,0,0,0,0*5D\n".encode('utf-8'))
