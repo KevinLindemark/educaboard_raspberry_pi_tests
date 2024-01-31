@@ -1,6 +1,5 @@
 import time
 import serial
-import datetime
 
 # Remember to disable login shell and enable serial hardware:
 """sudo raspi-config
@@ -25,5 +24,5 @@ while 1:
     time.sleep(1)
     print(received_message)
     if received_message != b'':
-        timestamp = datetime.datetime.now()
-        print(received_message,"\ntimestamp is: ",timestamp)
+        
+        print(received_message,"\n")
